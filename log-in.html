@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="CSS/styles.css"> <!-- Link to your CSS file -->
+    <script>
+        function closeWindow() {  
+            open(location, '_self').close();
+        }  
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Main Page</h1>
+        <nav>
+            <ul>
+                <li><a href="About-Us.html">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Adding new Customer</h2>
+            <form action="php/login_process.php" method="post"> <!-- Add appropriate action and method attributes -->
+                <table>
+                    <tr>
+                        <td><label for="name">Name:</label></td>
+                        <td><input type="text" id="name" name="name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email:</label></td>
+                        <td><input type="email" name="email" id="email"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="phone">phone:</label></td>
+                        <td><input type="text" id="phone" name="phone" required></td>
+                    </tr>
+
+                </table>
+
+                <button type="submit">Add</button>
+            </form>
+        </section>
+        <p style="font-size: 20px;">note : Every Customer will have unique ID automatically</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Mohammad Mohjri, Mofareh Al-Hadri, Hatem Al-Qadhi</p>
+        <p>Web Programming Mini Project</p>
+    </footer>
+
+</body>
+
+</html>

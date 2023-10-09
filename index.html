@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="CSS/styles.css"> <!-- Link to your CSS file -->
+</head>
+
+<body>
+
+    <header>
+        <h1>Login</h1>
+        <nav>
+            <ul>
+                <!-- <li><a href="#">Home</a></li>
+                <li><a href="#">Register</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Employee Login</h2>
+            <br><br>
+            <form action="php/Employee-log-in.php" method="post"> <!-- Add appropriate action and method attributes -->
+                <div>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Mohammad Mohjri, Mofareh Al-Hadri, Hatem Al-Qadhi</p>
+        <p>Web Programming Mini Project</p>    </footer>
+
+</body>
+
+</html>
