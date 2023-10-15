@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Register Page</title>
     <link rel="stylesheet" href="CSS/styles.css"> <!-- Link to your CSS file -->
 </head>
 
 <body>
 
     <header>
-        <h1>Login</h1>
+        <h1>Make a new account</h1>
         <nav>
             <ul>
                 <!-- <li><a href="#">Home</a></li>
@@ -22,11 +22,11 @@
 
     <main>
         <section>
-            <h2>Employee Login</h2>
+            <h2>Employee Register</h2>
             <br><br>
 
             <div class="log-in">
-                <form action="php/Employee-log-in.php" method="post"> <!-- Add appropriate action and method attributes -->
+                <form action="php/Register.php" method="post"> <!-- Add appropriate action and method attributes -->
                     <div>
                         <label for="username">Username:</label>
                         <input type="text" id="username" name="username" required>
@@ -35,8 +35,7 @@
                         <label for="password">Password:</label>
                         <input type="password" id="password" name="password" required>
                     </div>
-                    <button type="submit">Login</button> <br>
-                    <a href="register.html">Make a new account ?</a>
+                    <button type="submit">Login</button>
                 </form>
             </div>
         </section>

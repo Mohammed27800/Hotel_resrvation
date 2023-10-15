@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Room Selection</title>
+    <style>
+        table{
+            border-style: solid;
+            background-color: white;
+            color : black;
+        }
+        th{
+            background-color: red;
+            color: black;
+        }
+        body {
+          background-image: url('room.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+        }
+        h1{
+            color: red;
+        }
+        h2{
+            color: red;
+        }
+        h3{
+            color: red;
+        }
+        p{
+            color: red;
+        }
+        label{
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body><h1 align="center">ROOMS TYPES</h1>
+    <h2>Welcome to Room Selection</h2>
+    <p>Select a room type:</p>
+    
+    <form action="04.php" method="post">
+        <label for="roomType">Room Type:</label>
+        <select id="roomType" name="roomType">
+            <option value="Luxury">Luxury</option>
+            <option value="Deluxe">Deluxe</option>
+            <option value="Single">Single</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Show Room Details">
+    </form>
+    <h3>Reservation Bill Amount</h3>
+        <form action="calculate_total.php" method="post">
+           <table>
+            <tr><th>Rooms Type</th><th>Price Per Night</th><th>NO. Of Nights</th></tr>
+            <tr><td>Luxury</td><td>250$</td><td><input type="text" name="Luxury"></td></tr>
+            <tr><td>Deluxe</td><td>150$</td><td><input type="text" name="Deluxe"></td></tr>
+            <tr><td>Single</td><td>100$</td><td><input type="text" name="Single"></td></tr>
+            <tr><td><input type="submit" value="calculate"></td></tr>
+           </table>
+        </form>
+
+</body>
+</html>

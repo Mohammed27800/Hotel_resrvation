@@ -35,7 +35,7 @@ $sql = "INSERT INTO book (customer_name, phone, email) VALUES ('$name', '$phone'
 
 if ($conn->query($table) and $conn->query($sql) === TRUE) {
 
-    header("Location: ../rooms.html");
+    header("Location: ../Rooms/01.html");
     exit();
     
 
