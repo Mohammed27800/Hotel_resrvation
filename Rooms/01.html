@@ -4,57 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Room Selection</title>
+
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/style2.css"> 
+
     <style>
-        table{
-            border-style: solid;
-            background-color: white;
-            color : black;
-        }
-        th{
-            background-color: red;
-            color: black;
-        }
         body {
-          background-image: url('room.jpg');
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          background-size: 100% 100%;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
         }
-        h1{
-            color: red;
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
         }
-        h2{
-            color: red;
+
+        main {
+            margin: 50px auto;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        h3{
-            color: red;
+
+        h1, h2, h3 {
+            color: #333;
+            text-align: center;
         }
-        p{
-            color: red;
+
+        p {
+            color: #555;
+            text-align: center;
         }
-        label{
-            color: red;
-            font-size: 20px;
+
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        select, input[type="text"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        button[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
         }
     </style>
-    <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
 
     <header>
-        <h1>About Us</h1>
-        <nav>
-            <ul>
-                <li><a href="log-in.html">Main Page</a></li>
-            </ul>
-        </nav>
+        <h1>Welcome to Our Hotel</h1>
     </header>
 
     <main>
         <section>
-            <h1 align="center">ROOMS TYPES</h1>
-            <br><br>
-
+            <h1>ROOM TYPES</h1>
 
             <h2>Welcome to Room Selection</h2>
             <p>Select a room type:</p>
@@ -69,18 +125,18 @@
                 <br><br>
                 <input type="submit" value="Show Room Details">
             </form>
+
             <h3>Reservation Bill Amount</h3>
-                <form action="calculate_total.php" method="post">
-                   <table>
+            <form action="calculate_total.php" method="post">
+                <table>
                     <tr><th>Rooms Type</th><th>Price Per Night</th><th>NO. Of Nights</th></tr>
                     <tr><td>Luxury</td><td>250$</td><td><input type="text" name="Luxury"></td></tr>
                     <tr><td>Deluxe</td><td>150$</td><td><input type="text" name="Deluxe"></td></tr>
                     <tr><td>Single</td><td>100$</td><td><input type="text" name="Single"></td></tr>
-                    <tr><td><input type="submit" value="calculate"></td></tr>
-                   </table>
-                </form>
+                    <tr><td colspan="3"><input type="submit" value="Calculate"></td></tr>
+                </table>
+            </form>
         </section>
-        
     </main>
 
     <footer>

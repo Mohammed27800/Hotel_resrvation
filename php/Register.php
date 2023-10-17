@@ -19,19 +19,16 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$username = $_POST['username'];
+$username = strtoupper($conn->real_escape_string($_POST['username']));
 $password = $_POST['password'];
 
-// Escaping user input to prevent SQL injection
-$username = $conn->real_escape_string($username);
+$sql = "INSERT INTO employee (username, password) VALUES ('$username', '$password')";
 
-$sql = "INSERT INTO employee ($username,$password);";
-$result = $conn->query($sql);
-
-if ($conn->query($sql)) {
-    header("Location: ../rooms.html");
+if ($conn->query($sql) === TRUE) {
+    header("Location: ../More-info.html");
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
-
 
 // Close connection
 $conn->close();

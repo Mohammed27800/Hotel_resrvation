@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>Room Details</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+
     <style>
          body {
           background-image: url('room.jpg');
@@ -67,17 +69,30 @@
     </style>
 </head>
 <body>
-    <h1>Room Details</h1>
-    
-    <?php
+
+<header>
+        <h1>Room details</h1>
+        <nav>
+            <ul>
+                <li><a href="log-in.html">Main Page</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Room details</h1>
+
+
+            <?php
     // Get the selected room type from the previous page
     $roomType = $_POST['roomType'];
 
     // Define an array to map room types to their respective image arrays
     $roomImages = array(
-        'Luxury' => array('luxury_room1.jpeg', 'luxury_room2.jpeg', 'luxury_room3.jpeg'),
-        'Deluxe' => array('deluxe_room1.jpeg', 'deluxe_room2.jpeg', 'deluxe_room3.jpeg'),
-        'Single' => array('single_room1.jpeg', 'single_room2.jpeg', 'single_room3.jpeg')
+        'Luxury' => array('luxury_room1.png', 'luxury_room2.png', 'luxury_room3.png'),
+        'Deluxe' => array('deluxe_room1.png', 'deluxe_room2.png', 'deluxe_room3.png'),
+        'Single' => array('single_room1.png', 'single_room2.png', 'single_room3.png')
     );
 
     // Display room details and image slideshow based on the selected room type
@@ -137,5 +152,15 @@
     
 
     <a href="01.html">Go back to Room Selection</a>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Mohammad Mohjri, Mofareh Al-Hadri, Hatem Al-Qadhi</p>
+    </footer>
+    <h1>Room Details</h1>
+    
+
 </body>
 </html>

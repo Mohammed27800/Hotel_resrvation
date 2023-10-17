@@ -19,7 +19,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$username = $_POST['username'];
+$username = strtoupper($_POST['username']);
 $password = $_POST['password'];
 
 // Escaping user input to prevent SQL injection
